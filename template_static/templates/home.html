@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<h1>Home Page</h1>
+<p>This is home page</p>
+<img src={% static 'images/download.jpg' %}>
+<button onclick="handleClick()">Click</button>
+{% endblock %}
