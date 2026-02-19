@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %} Base Page {% endblock %}</title>
+</head> 
+<body>
+    <nav>
+        <ul>
+           <li><a href="/">Home</a></li>
+           <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    {% block content %}
+    {% endblock %}
+
+    <hr>
+    <footer>
+        &copy; Made By RD
+    </footer>
+</body>
+</html>
