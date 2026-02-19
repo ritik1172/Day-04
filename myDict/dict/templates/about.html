@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+</head>
+<body>
+    <h1>About Page</h1>
+    {% if blog.0.isPublished %}
+    <p>Published</p>
+    {% else %}
+    <p>Not Published</p>
+    {% endif %}
+</body>
+</html>

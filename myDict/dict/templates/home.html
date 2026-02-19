@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    
+    {% comment %} Filters - Text, Number {% endcomment %}
+    {% if is_published %}
+    <h1>{{ title }}</h1>
+    {% else %}
+    <h1>Not Published</h1>
+    {% endif %}
+
+    <p>{{ content|upper }}</p>
+    <p>{{ content|lower }}</p>
+    <p>{{ content|truncatechars:10 }}</p>
+    <p>{{ content|truncatewords:2 }}</p>
+
+    <hr>
+    <p>{{ Price }}</p>
+    <p>{{ Price|add:10 }}</p>
+
+    {% comment %} List filter {% endcomment %}
+    <p>{{ tags|first }}</p>
+    <p>{{ tags|last }}</p>
+    <p>{{ tags|length }}</p>
+
+    <hr>
+    {% comment %} Filters - Date and Time {% endcomment %}
+    <h2>{{ created_at|date:"d-m-y" }}</h2>
+    <h2>{{ created_at|time:"H:i"}}</h2>
+
+    {% comment %} for loop {% endcomment %}
+    {% for tag in tags %}
+        <li>{{ forloop.counter }} - {{ tag }}</li>
+    {% endfor %}
+</body>
+</html>
